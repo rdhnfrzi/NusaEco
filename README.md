@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="NUSA ECO - Bank Sampah Sekolah Adiwiyata" width="100%"/>
+<img src="banner.svg" alt="NUSA ECO - Bank Sampah Sekolah Adiwiyata" width="100%"/>
 
 <br/>
 
@@ -12,7 +12,7 @@
 
 ### ♻️ Digitalisasi Bank Sampah &bull; Edukasi Pemilahan &bull; Dampak Lingkungan Nyata
 
-[**🌐 Buka Website**](https://rdhnfrzi.github.io/NusaEco/) &nbsp;•&nbsp; [**✨ Fitur**](#-fitur-utama) &nbsp;•&nbsp; [**🚀 Cara Menjalankan**](#-cara-menjalankan) &nbsp;•&nbsp; [**👥 Tim**](#-tim-penyusun)
+[**🌐 Buka Website**](https://USERNAME.github.io/NAMA-REPO/) &nbsp;•&nbsp; [**✨ Fitur**](#-fitur-utama) &nbsp;•&nbsp; [**🚀 Cara Menjalankan**](#-cara-menjalankan) &nbsp;•&nbsp; [**👥 Tim**](#-tim-penyusun)
 
 </div>
 
@@ -69,7 +69,7 @@ Project sudah di-deploy lewat **GitHub Pages**, jadi bisa langsung dipakai tanpa
 
 <br/>
 
-<img src="assets/logo.svg" alt="Logo NUSA ECO" width="64"/>
+<img src="logo.svg" alt="Logo NUSA ECO" width="64"/>
 
 *Dibuat dengan 💚 untuk sekolah yang lebih hijau.*
 
