@@ -59,7 +59,7 @@ Project sudah di-deploy lewat **GitHub Pages**, jadi bisa langsung dipakai tanpa
 
 <div align="center">
 
-**© Disuruh Ngikut** &nbsp;|&nbsp; **SMKN 4 Kuningan**
+
 
 | No | Nama Anggota |
 |:-:|:--|
@@ -73,4 +73,5 @@ Project sudah di-deploy lewat **GitHub Pages**, jadi bisa langsung dipakai tanpa
 
 *Dibuat dengan 💚 untuk sekolah yang lebih hijau.*
 
+**© Disuruh Ngikut** &nbsp;|&nbsp; **SMKN 4 Kuningan**
 </div>
