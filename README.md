@@ -1,39 +1,76 @@
-# NUSA ECO — Bank Sampah Sekolah Adiwiyata
+<div align="center">
 
-## Deskripsi Website
-**NUSA ECO** adalah platform web statis edukasi dan manajemen **Bank Sampah Sekolah Adiwiyata** berbasis HTML, CSS, dan Vanilla JavaScript. Website ini dirancang untuk mendukung digitalisasi pencatatan bank sampah sekolah, pemantauan dampak lingkungan, serta edukasi pemilahan sampah bagi siswa.
+<img src="assets/banner.svg" alt="NUSA ECO - Bank Sampah Sekolah Adiwiyata" width="100%"/>
 
-### Halaman & Fitur Utama
-- **`index.html` (Beranda):** Informasi program Sekolah Adiwiyata, edukasi pengelolaan sampah, simulasi pemilahan sampah interaktif, serta ringkasan indikator lingkungan.
-- **`dashboard.html` (Dashboard):** Visualisasi grafik komposisi sampah bulanan, tingkat partisipasi siswa, dan persentase pengelolaan prinsip 3R (*Reduce, Reuse, Recycle*).
-- **`banksampah.html` (Bank Sampah):** Formulir pencatatan setoran sampah siswa yang tersimpan langsung secara lokal di browser.
-- **`scan-sampah.html` (Scan Sampah):** Fitur pemindaian dan identifikasi jenis sampah menggunakan kamera perangkat yang terhubung dengan database sampah (`data/waste-database.json`).
-- **`ecopoint-impact.html` (EcoPoint & Impact):** Ringkasan akumulasi poin lingkungan, jejak pengurangan emisi karbon, dan dampak penerapan prinsip 3R.
+<br/>
 
----
+![HTML5](https://img.shields.io/badge/HTML5-236B45?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1A5236?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/Vanilla_JS-7FCB9A?style=for-the-badge&logo=javascript&logoColor=0F3A24)
+![Chart.js](https://img.shields.io/badge/Chart.js-DCEBDD?style=for-the-badge&logo=chartdotjs&logoColor=236B45)
+![GitHub Pages](https://img.shields.io/badge/Hosted_on-GitHub_Pages-0F3A24?style=for-the-badge&logo=github&logoColor=white)
 
-## Petunjuk Menjalankan Project
-Project ini sudah di-deploy menggunakan **GitHub Pages**, sehingga dapat langsung diakses dan digunakan tanpa proses instalasi tambahan:
+### ♻️ Digitalisasi Bank Sampah &bull; Edukasi Pemilahan &bull; Dampak Lingkungan Nyata
 
-1. Buka tautan website **GitHub Pages** yang telah disediakan melalui browser (Google Chrome, Edge, Safari, atau browser mobile).
-2. Pastikan koneksi internet aktif untuk memuat halaman serta aset pendukung (seperti grafik Chart.js).
-3. Izinkan akses kamera saat browser meminta izin pada halaman **Scan Sampah (`scan-sampah.html`)** agar fitur pemindaian dapat berfungsi.
-4. Jelajahi seluruh menu navigasi (Beranda, Dashboard, Bank Sampah, Scan Sampah, dan EcoPoint Impact) secara langsung melalui halaman web.
+[**🌐 Buka Website**](https://USERNAME.github.io/NAMA-REPO/) &nbsp;•&nbsp; [**✨ Fitur**](#-fitur-utama) &nbsp;•&nbsp; [**🚀 Cara Menjalankan**](#-cara-menjalankan) &nbsp;•&nbsp; [**👥 Tim**](#-tim-penyusun)
+
+</div>
 
 ---
 
-## Catatan Teknis
-- **Akses Langsung via Link GitHub Pages:** Pengguna **tidak perlu mengekstrak file ZIP**, **tidak perlu menjalankan perintah di CMD/Terminal**, dan **tidak perlu menggunakan ekstensi Live Server** karena aplikasi sudah berjalan online dalam bentuk tautan web siap pakai.
-- **Keamanan Akses Kamera & Data JSON (HTTPS):** Karena di-hosting melalui **GitHub Pages** yang sudah menggunakan protokol aman **HTTPS**, browser secara otomatis mengizinkan akses kamera perangkat untuk fitur *Scan Sampah* serta pembacaan data dari file `data/waste-database.json` tanpa kendala pemblokiran keamanan browser (*CORS / insecure context*).
-- **Penyimpanan Data (`localStorage`):** Seluruh data pencatatan setoran sampah dan perolehan poin disimpan secara lokal di browser pengguna menggunakan `localStorage` (melalui `js/storage.js` dengan key `nusaeco-submissions-v1`). Data akan tetap tersimpan selama riwayat/cache browser tidak dihapus, namun bersifat lokal pada masing-masing perangkat/browser yang digunakan.
+## 🌿 Tentang NUSA ECO
+
+**NUSA ECO** adalah platform web statis untuk edukasi dan manajemen **Bank Sampah Sekolah Adiwiyata**, dibangun dengan **HTML, CSS, dan Vanilla JavaScript**. Website ini mendukung digitalisasi pencatatan bank sampah sekolah, pemantauan dampak lingkungan, serta edukasi pemilahan sampah bagi siswa.
 
 ---
 
-## Tim Penyusun
+## ✨ Fitur Utama
 
-**Nama Kelompok:** &copy;Disuruh Ngikut | SMKN 4 Kuningan
+| Halaman | Deskripsi |
+|:--|:--|
+| 🏡 **Beranda** <br/>`index.html` | Informasi program Sekolah Adiwiyata, edukasi pengelolaan sampah, **simulasi pemilahan sampah interaktif**, dan ringkasan indikator lingkungan. |
+| 📊 **Dashboard** <br/>`dashboard.html` | Grafik komposisi sampah bulanan, tingkat partisipasi siswa, dan persentase pengelolaan prinsip **3R** (*Reduce, Reuse, Recycle*). |
+| 🏦 **Bank Sampah** <br/>`banksampah.html` | Formulir pencatatan setoran sampah siswa yang tersimpan langsung secara lokal di browser. |
+| 📷 **Scan Sampah** <br/>`scan-sampah.html` | Pemindaian & identifikasi jenis sampah lewat kamera perangkat, terhubung ke database `data/waste-database.json`. |
+| 🌱 **EcoPoint & Impact** <br/>`ecopoint-impact.html` | Akumulasi poin lingkungan, jejak pengurangan emisi karbon, dan dampak penerapan prinsip 3R. |
 
-**Anggota Kelompok:**
-1. Muhammad Ridhan Aisyfarizi
-2. Satria Putra Anugrah
-3. Almahesa
+---
+
+## 🚀 Cara Menjalankan
+
+Project sudah di-deploy lewat **GitHub Pages**, jadi bisa langsung dipakai tanpa instalasi:
+
+1. 🌐 Buka tautan **GitHub Pages** project melalui browser (Chrome, Edge, Safari, atau browser mobile).
+2. 📶 Pastikan koneksi internet aktif untuk memuat halaman dan aset pendukung (misalnya grafik Chart.js).
+3. 📷 Izinkan akses kamera saat diminta pada halaman **Scan Sampah** agar fitur pemindaian berfungsi.
+4. 🧭 Jelajahi seluruh menu: Beranda, Dashboard, Bank Sampah, Scan Sampah, dan EcoPoint Impact.
+
+---
+
+## 🛠️ Catatan Teknis
+
+- **Akses langsung via GitHub Pages** — tidak perlu ekstrak ZIP, tidak perlu CMD/Terminal, dan tidak perlu Live Server.
+- **Aman lewat HTTPS** — GitHub Pages memakai HTTPS, sehingga browser mengizinkan akses kamera untuk *Scan Sampah* dan pembacaan `data/waste-database.json` tanpa kendala *CORS / insecure context*.
+- **Penyimpanan data (`localStorage`)** — data setoran dan poin disimpan di browser lewat `js/storage.js` dengan key `nusaeco-submissions-v1`. Data tetap ada selama cache/riwayat browser tidak dihapus, dan bersifat lokal per perangkat/browser.
+
+---
+
+## 👥 Tim Penyusun
+
+<div align="center">
+
+**© Disuruh Ngikut** &nbsp;|&nbsp; **SMKN 4 Kuningan**
+
+| No | Nama Anggota |
+|:-:|:--|
+| 1 | Muhammad Ridhan Aisyfarizi |
+| 2 | Satria Putra Anugrah |
+| 3 | Almahesa |
+
+<br/>
+
+<img src="assets/logo.svg" alt="Logo NUSA ECO" width="64"/>
+
+*Dibuat dengan 💚 untuk sekolah yang lebih hijau.*
+
+</div>
