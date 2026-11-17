@@ -12,7 +12,7 @@
 
 ### ♻️ Digitalisasi Bank Sampah &bull; Edukasi Pemilahan &bull; Dampak Lingkungan Nyata
 
-[**🌐 Buka Website**](https://USERNAME.github.io/NAMA-REPO/) &nbsp;•&nbsp; [**✨ Fitur**](#-fitur-utama) &nbsp;•&nbsp; [**🚀 Cara Menjalankan**](#-cara-menjalankan) &nbsp;•&nbsp; [**👥 Tim**](#-tim-penyusun)
+[**🌐 Buka Website**](https://rdhnfrzi.github.io/NusaEco/) &nbsp;•&nbsp; [**✨ Fitur**](#-fitur-utama) &nbsp;•&nbsp; [**🚀 Cara Menjalankan**](#-cara-menjalankan) &nbsp;•&nbsp; [**👥 Tim**](#-tim-penyusun)
 
 </div>
 
