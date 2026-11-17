@@ -31,7 +31,7 @@ Project ini sudah di-deploy menggunakan **GitHub Pages**, sehingga dapat langsun
 
 ## Tim Penyusun
 
-**Nama Kelompok:** Disuruh Ngikut
+**Nama Kelompok:** &copy;Disuruh Ngikut | SMKN 4 Kuningan
 
 **Anggota Kelompok:**
 1. Muhammad Ridhan Aisyfarizi
