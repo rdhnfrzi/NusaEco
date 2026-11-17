@@ -1,0 +1,23 @@
+/* NUSA ECO — responsive rules */
+/* navbar rules live in navbar.css only */
+@media(max-width:900px){.hgrid{grid-template-columns:1fr}}
+@media(max-width:980px){.sg{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.sg{grid-template-columns:1fr}}
+@media(max-width:900px){.cl{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:380px){.cl{grid-template-columns:1fr}}
+@media(max-width:980px){.sc:nth-child(even){margin-top:0}}
+@media(max-width:900px){.cg{grid-template-columns:1fr}}
+@media(max-width:600px){.pr:nth-child(n){margin-left:0}}
+@media(max-width:800px){.ab{grid-template-columns:1fr}}
+@media(max-width:1000px){.ecards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.ecards{grid-template-columns:1fr}}
+@media(max-width:860px){.sim{grid-template-columns:1fr}}
+@media(max-width:900px){.steps{grid-template-columns:1fr;gap:0}}
+@media(max-width:900px){.st{padding:0 0 32px 70px}.st::before{top:46px;bottom:0;left:22px;width:3px;height:auto;right:auto}.st .n{top:0}}
+/* touch behaviour, charts */
+@media(max-width:860px){.cc{grid-template-columns:1fr}.cbox{height:240px}}
+@media(max-width:520px){.chc{padding:18px}.sc{padding:22px}.simw{border-radius:32px}.cta{border-radius:32px}}
+@media(hover:none){.btn:hover{transform:none;background:var(--pg)}.btn.o:hover{background:transparent}.btn.w:hover{background:#fff}.btn:active{filter:brightness(.92)}.ec:hover,.bin:hover:not(:disabled){transform:none}}
+
+/* hero illustration: keep floating chips inside the art box and clear of the bins */
+@media(max-width:520px){.art .chip{padding:10px 12px;font-size:.84rem}.art .chip:nth-last-child(2){left:0!important;top:12%!important}.art .chip:last-child{right:0!important;bottom:34%!important}}

@@ -1,0 +1,36 @@
+/* NUSA ECO — shared navbar, identical on every page */
+.sn{position:sticky;top:env(safe-area-inset-top,0px);z-index:70;background:color-mix(in srgb,var(--bg,#F7F8F4) 88%,transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);color:var(--tx,#123D2B);font:500 .95rem/1.4 Inter,system-ui,sans-serif}
+.sn,.sn *,.sn *::before,.sn *::after{box-sizing:border-box}
+.sn .wrap{position:relative;display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px;width:min(1180px,100% - 40px);max-width:none;margin:0 auto;padding:0}
+.sn .logo{display:flex;align-items:center;gap:10px;font:800 1.25rem "Plus Jakarta Sans",sans-serif;letter-spacing:-.02em;text-decoration:none;color:inherit;white-space:nowrap;flex:0 1 auto;min-width:0}
+.sn .links{position:relative;display:flex;flex:1;align-items:center;gap:4px;margin:0 0 0 24px}
+.sn .links a.l{position:relative;z-index:1;padding:10px 14px;border-radius:999px;text-decoration:none;color:inherit;font-weight:500;font-size:.95rem;white-space:nowrap;background:transparent;transition:background .25s}
+.sn .links a.l:hover{background:color-mix(in srgb,var(--ss,#DCEBDD) 55%,transparent)}
+.sn .links a.l.on,.sn .links a.l.on:hover{background:transparent;font-weight:700}
+.sn .sp{margin-left:auto}
+.sn .ind{position:absolute;left:0;top:0;border-radius:999px;background:var(--ss,#DCEBDD);opacity:0;pointer-events:none;z-index:0;transition:transform .45s cubic-bezier(.3,.8,.2,1),width .45s,height .45s,opacity .3s}
+.sn .ind.on{opacity:1}
+.sn .sn-cta{position:relative;z-index:1;margin-left:10px;display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 22px;border-radius:999px;background:var(--pg,#236B45);color:#fff;font:700 .95rem "Plus Jakarta Sans",sans-serif;text-decoration:none;white-space:nowrap;box-shadow:0 10px 22px -10px rgba(35,107,69,.65);transition:transform .25s,background .25s;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.sn .sn-cta:hover{background:var(--df,#123D2B);transform:translateY(-2px)}
+.sn .sn-cta:active{transform:scale(.96)}
+.sn .sn-cta.on{box-shadow:0 0 0 3px var(--ss,#DCEBDD),0 10px 22px -10px rgba(35,107,69,.65)}
+.sn :focus-visible{outline:3px solid #80B98A;outline-offset:3px}
+.sn .burger{display:none;position:relative;flex:none;width:44px;height:44px;min-width:44px;min-height:44px;margin:0;padding:0;border:0;border-radius:14px;background:var(--ss,#DCEBDD);color:var(--tx,#123D2B);box-shadow:none;font:inherit;line-height:0;overflow:hidden;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation;transition:background .25s,transform .15s}
+.sn .burger:hover{background:color-mix(in srgb,var(--ss,#DCEBDD) 80%,var(--fg,#80B98A));transform:none;box-shadow:none}
+.sn .burger:active{transform:scale(.94)}
+.sn .burger i{position:absolute;left:12px;right:12px;top:calc(50% - 1.25px);display:block;width:auto;height:2.5px;margin:0;border-radius:2px;background:currentColor;transition:transform .35s cubic-bezier(.3,.8,.2,1),opacity .2s}
+.sn .burger i:first-child{transform:translateY(-7px)}.sn .burger i:last-child{transform:translateY(7px)}
+.sn .burger[aria-expanded=true] i:first-child{transform:rotate(45deg)}
+.sn .burger[aria-expanded=true] i:nth-child(2){opacity:0}
+.sn .burger[aria-expanded=true] i:last-child{transform:rotate(-45deg)}
+@media(max-width:1100px){
+.sn .burger{display:block}
+.sn .links{position:absolute;top:72px;left:-20px;right:-20px;margin:0;flex-direction:column;align-items:stretch;gap:4px;padding:12px 20px 20px;max-height:calc(100vh - 72px - env(safe-area-inset-top,0px));max-height:calc(100dvh - 72px - env(safe-area-inset-top,0px));overflow-y:auto;overscroll-behavior:contain;background:var(--bg,#F7F8F4);border-bottom:1px solid rgba(119,127,120,.2);box-shadow:0 24px 40px -24px rgba(18,61,43,.35);visibility:hidden;opacity:0;pointer-events:none;transform:translateY(-10px);transition:opacity .3s,transform .3s,visibility 0s .3s}
+.sn .links.open{visibility:visible;opacity:1;pointer-events:auto;transform:none;transition-delay:0s}
+.sn .ind{display:none}
+.sn .links a.l{min-height:44px;display:flex;align-items:center}
+.sn .links a.l.on,.sn .links a.l.on:hover{background:var(--ss,#DCEBDD)}
+.sn .sp{margin-left:0}
+.sn .sn-cta{margin:8px 0 0;min-height:48px}}
+@media(max-width:360px){.sn .logo{font-size:1.1rem;gap:8px}.sn .logo svg{width:30px;height:30px}}
+@media(prefers-reduced-motion:reduce){.sn *{transition-duration:.01ms!important}}

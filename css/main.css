@@ -1,0 +1,159 @@
+/* NUSA ECO — base styles & design tokens */
+:root{--r-s:18px;--r-m:28px;--r-xl:48px;--pg:#236B45;--df:#123D2B;--fg:#80B98A;--ss:#DCEBDD;--wh:#fff;--bg:#F7F8F4;--ng:#777F78;--bj:#EAEDE5;--tx:#123D2B;--mu:#4d5750;--card:#fff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ne-link:#80B98A;--ne-link-hv:#EAF3EC;--ne-pill-bg:#1d3b30;--bg:#0E2219;--tx:#EAF3EC;--mu:#A9B8AD;--card:#16312A;--bj:#1d3b30;--ss:#1d3b30;color-scheme:dark}}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 17px/1.6 Inter,system-ui,sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+h1,h2,h3,.hd{font-family:"Plus Jakarta Sans",Inter,sans-serif;line-height:1.05;letter-spacing:-.03em;margin:0}
+h1{font-size:clamp(2.6rem,7vw,5.6rem);font-weight:800}
+h2{font-size:clamp(2rem,4.4vw,3.4rem);font-weight:800}
+h3{font-size:1.25rem;font-weight:700;letter-spacing:-.01em}
+p{margin:0;max-width:60ch;color:var(--mu)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--fg);outline-offset:3px}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+section{padding:clamp(56px,8vw,104px) 0}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 26px;border-radius:999px;border:2px solid var(--pg);font:700 .98rem "Plus Jakarta Sans",sans-serif;text-decoration:none;cursor:pointer;transition:transform .25s,background .25s,color .25s;background:var(--pg);color:#fff}
+.btn:hover{transform:translateY(-3px);background:var(--df)}
+.btn:active{transform:scale(.97)}
+.btn.o{background:transparent;color:var(--tx);border-color:currentColor}
+.btn.o:hover{background:var(--ss)}
+.btn.w{background:#fff;color:var(--df);border-color:#fff}
+.btn.w:hover{background:var(--ss)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:70;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font:800 1.25rem "Plus Jakarta Sans";text-decoration:none;letter-spacing:-.02em}
+.links{display:flex;gap:6px;align-items:center}
+.links a.l{padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:500;font-size:.95rem}
+.links a.l:hover,.links a.l.on{background:var(--ss)}
+.burger{display:none;min-width:44px;min-height:44px;border:0;background:var(--ss);border-radius:14px;color:var(--tx);cursor:pointer}
+.view{display:none}
+.view.on{display:block}
+/* hero */
+.hero{padding-top:clamp(32px,6vw,72px);overflow:hidden}
+.hgrid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.tag{display:inline-block;background:var(--ss);color:var(--pg);padding:6px 14px;border-radius:999px;font-weight:600;font-size:.88rem;margin-bottom:22px}
+@media(prefers-color-scheme:dark){.tag{color:var(--fg)}}
+.hero h1 em{font-style:normal;color:var(--pg);display:block}
+@media(prefers-color-scheme:dark){.hero h1 em{color:var(--fg)}}
+.hero p.sub{font-size:1.15rem;margin:26px 0 34px}
+.row{display:flex;flex-wrap:wrap;gap:14px}
+.art{position:relative;aspect-ratio:1/1.05;max-width:520px;margin-inline:auto;width:100%}
+.blob{position:absolute;inset:0;background:linear-gradient(150deg,var(--fg),var(--pg) 60%,var(--df));border-radius:62% 38% 55% 45%/48% 58% 42% 52%;animation:morph 14s ease-in-out infinite}
+@keyframes morph{50%{border-radius:42% 58% 40% 60%/58% 42% 58% 42%}}
+.art>svg{position:absolute;inset:0;width:100%;height:100%}
+.art .chip{position:absolute;z-index:2;max-width:calc(100% - 8px);background:var(--card);border-radius:var(--r-s);padding:12px 16px;box-shadow:0 18px 40px -16px rgba(18,61,43,.35);font:700 .9rem "Plus Jakarta Sans",Inter,system-ui,sans-serif;line-height:1.25;display:flex;gap:10px;align-items:center}
+.art .chip svg{position:static;flex:none;width:26px;height:26px;animation:none}
+.art .chip small{display:block;font:400 .75rem Inter;color:var(--mu)}
+/* stats */
+.stats{background:var(--bj)}
+.demo{display:inline-flex;flex-wrap:wrap;align-items:center;gap:10px 16px;max-width:100%;font-size:.92rem;line-height:1.5;border:1px dashed var(--ng);border-radius:28px;padding:12px 20px;color:var(--mu);margin:14px 0 40px}
+.demo span{min-width:0;overflow-wrap:anywhere}
+.cl{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.cl li{display:flex;flex-direction:column;gap:2px;min-width:0;background:var(--bj);border-radius:var(--r-s);padding:16px 18px}
+.cl b{font:700 .95rem "Plus Jakarta Sans",Inter,sans-serif;color:var(--tx);overflow-wrap:anywhere}
+.cl .kg{font:800 1.7rem/1.15 "Plus Jakarta Sans",Inter,sans-serif;letter-spacing:-.02em;color:var(--pg)}
+.cl small{font-size:.86rem;line-height:1.45;color:var(--mu);overflow-wrap:anywhere}
+.sg{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.sc{background:var(--card);border-radius:var(--r-m);padding:26px;box-shadow:0 20px 40px -24px rgba(18,61,43,.3);transition:transform .3s}
+.sc:hover{transform:translateY(-6px)}
+.sc:nth-child(even){margin-top:28px}
+.num{font:800 2.6rem "Plus Jakarta Sans";letter-spacing:-.03em;color:var(--pg)}
+@media(prefers-color-scheme:dark){.num,.cl .kg{color:var(--fg)}}
+.bar{height:8px;border-radius:9px;background:var(--bj);margin-top:16px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--pg);border-radius:9px;transition:width 1.6s cubic-bezier(.2,.7,.2,1)}
+.ring{width:64px;height:64px;margin-top:10px;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:8;stroke-linecap:round}
+.ring .t{stroke:var(--bj)}
+.ring .v{stroke:var(--pg);stroke-dasharray:176;stroke-dashoffset:176;transition:stroke-dashoffset 1.6s}
+/* campaign */
+.cg{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.prob{display:grid;gap:16px}
+.pr{display:grid;grid-template-columns:56px 1fr;gap:18px;padding:22px;border-radius:var(--r-m);background:var(--card);transition:transform .3s}
+.pr:nth-child(2){margin-left:36px}
+.pr:nth-child(4){margin-left:36px}
+.pr:hover{transform:translateX(8px)}
+.ic{width:56px;height:56px;border-radius:var(--r-s);background:var(--ss);display:grid;place-items:center;color:var(--pg)}
+.pr p{margin-top:4px;font-size:.96rem}
+/* cta */
+.cta{background:linear-gradient(140deg,var(--pg),var(--df));color:#fff;border-radius:var(--r-xl);padding:clamp(40px,7vw,88px);position:relative;overflow:hidden}
+.cta p{color:#DCEBDD;margin:20px 0 32px;font-size:1.1rem}
+.cta>svg{position:absolute;right:-40px;bottom:-60px;width:360px;opacity:.14}
+/* about */
+.ab{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.vals{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.vals span{background:var(--ss);border-radius:999px;padding:8px 16px;font-weight:600;font-size:.9rem}
+/* edu */
+.ecards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:48px}
+.ec{all:unset;box-sizing:border-box;cursor:pointer;background:var(--card);border-radius:var(--r-m);padding:24px;display:flex;flex-direction:column;gap:12px;transition:transform .3s,box-shadow .3s;border:2px solid transparent}
+.ec:hover{transform:translateY(-6px);box-shadow:0 24px 44px -24px rgba(18,61,43,.4)}
+.ec:focus-visible{outline:3px solid var(--fg);outline-offset:3px}
+.ec[aria-expanded=true]{border-color:var(--pg)}
+.ec .dot{width:64px;height:64px;border-radius:22px 22px 22px 6px;display:grid;place-items:center;color:#fff}
+.more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s}
+.ec[aria-expanded=true] .more{grid-template-rows:1fr}
+.more>div{overflow:hidden;font-size:.94rem;color:var(--mu)}
+.more b{color:var(--tx);display:block;margin-top:10px}
+.hint{font-size:.85rem;color:var(--pg);font-weight:600}
+@media(prefers-color-scheme:dark){.hint{color:var(--fg)}}
+/* sim */
+.simw{background:var(--df);color:#fff;border-radius:var(--r-xl);padding:clamp(28px,5vw,64px)}
+.simw p{color:#cfe3d3}
+.sim{margin-top:32px;display:grid;grid-template-columns:.8fr 1.2fr;gap:28px;align-items:center}
+.item{background:var(--wh);color:var(--df);border-radius:var(--r-m);padding:34px;text-align:center;min-height:240px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px}
+.item .hd{font-size:1.6rem;font-weight:800}
+.item.pop{animation:pop .35s}
+@keyframes pop{from{transform:scale(.94)}}
+.bins{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.bin{min-height:76px;border-radius:var(--r-s);border:2px solid rgba(255,255,255,.25);background:rgba(255,255,255,.07);color:#fff;font:700 1rem "Plus Jakarta Sans";cursor:pointer;display:flex;align-items:center;gap:12px;padding:0 18px;transition:transform .2s,background .2s;text-align:left}
+.bin:hover:not(:disabled){background:rgba(255,255,255,.16);transform:translateY(-3px)}
+.bin:disabled{cursor:default}
+.bin.ok{background:#2f9a62;border-color:#9be3bb}
+.bin.no{background:#a14a3d;border-color:#f0a99f}
+.bin span{width:14px;height:14px;border-radius:50%;flex:none}
+.fb{margin-top:18px;min-height:84px;border-radius:var(--r-s);padding:16px 20px;background:rgba(255,255,255,.08);font-size:.98rem;color:#fff}
+.fb b{font-family:"Plus Jakarta Sans"}
+.meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-weight:600;font-size:.9rem}
+.prog{height:6px;background:rgba(255,255,255,.18);border-radius:9px;flex:1;margin:0 16px;overflow:hidden}
+.prog i{display:block;height:100%;background:var(--fg);transition:width .4s}
+.end{text-align:center;padding:30px 10px}
+.end .big{font:800 clamp(4rem,12vw,7rem) "Plus Jakarta Sans";line-height:1;color:var(--fg)}
+.end p{margin:14px auto 26px;color:#cfe3d3}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:56px;position:relative}
+.st{position:relative;padding-top:58px}
+.st::before{content:"";position:absolute;top:22px;left:44px;right:-14px;height:3px;background:var(--fg);border-radius:3px}
+.st:last-child::before{display:none}
+.st .n{position:absolute;top:0;left:0;width:46px;height:46px;border-radius:50%;background:var(--pg);color:#fff;display:grid;place-items:center;font:800 .95rem "Plus Jakarta Sans"}
+.st h3{margin-bottom:6px}
+.st p{font-size:.92rem}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+
+/* tim — blok identitas di CTA "Be Part of the Green" (efek hover/tap selaras kartu jenis sampah) */
+.team{margin:24px 0 34px;max-width:880px}
+.cta .team-id{margin:0 0 16px;max-width:none;color:#fff;font:800 clamp(1.05rem,2.2vw,1.35rem)/1.3 "Plus Jakarta Sans",Inter,sans-serif;letter-spacing:-.01em}
+.team-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;counter-reset:tm}
+.tm{counter-increment:tm;position:relative;display:flex;align-items:center;gap:14px;min-height:72px;padding:14px 16px;border-radius:var(--r-s);background:rgba(255,255,255,.08);border:2px solid rgba(220,235,221,.18);color:#fff;outline:none;-webkit-tap-highlight-color:transparent;touch-action:manipulation;transition:transform .35s cubic-bezier(.2,.7,.2,1),background .35s,border-color .35s,box-shadow .35s}
+.tm-n{flex:none;width:44px;height:44px;border-radius:16px 16px 16px 5px;background:var(--fg);color:var(--df);display:grid;place-items:center;font:800 1.05rem "Plus Jakarta Sans",sans-serif;transition:transform .4s cubic-bezier(.3,.8,.2,1)}
+.tm-n::before{content:counter(tm)}
+.tm-name{flex:1;min-width:0;font:700 1rem/1.3 "Plus Jakarta Sans",Inter,sans-serif;letter-spacing:-.01em;overflow-wrap:anywhere}
+.tm-lf{flex:none;width:22px;height:22px;opacity:0;transform:translateX(-6px) rotate(-20deg) scale(.8);transition:opacity .35s,transform .4s cubic-bezier(.3,.8,.2,1);background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23DCEBDD' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 20V10M12 10c0-4 3-6 8-6 0 5-2 8-8 6zM12 14c0-3-2-5-7-5 0 4 2 6 7 5z'/%3E%3C/svg%3E") center/contain no-repeat}
+.tm.is-on,.tm:focus-visible{transform:translateY(-6px);background:rgba(255,255,255,.17);border-color:var(--fg);box-shadow:0 22px 40px -22px rgba(0,0,0,.45)}
+.tm.is-on .tm-n,.tm:focus-visible .tm-n{transform:rotate(-8deg) scale(1.08)}
+.tm.is-on .tm-lf,.tm:focus-visible .tm-lf{opacity:1;transform:none}
+.tm:focus-visible{outline:3px solid var(--fg);outline-offset:3px}
+@media(max-width:500px){.team-list{grid-template-columns:1fr}.tm{min-height:64px}}
+@media(prefers-reduced-motion:reduce){.tm,.tm-n,.tm-lf{transition:none}}
+
+/* kartu jenis sampah: hover membuka di desktop, tap di mobile — klik tidak diperlukan di desktop */
+.ec{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+@media(hover:hover) and (pointer:fine){.ec{cursor:default}}
+.ec .hint{min-height:1.3em}
+@media(max-width:400px){
+  .cta{padding:32px 22px}
+  .tm{padding:12px;gap:10px;min-height:60px}
+  .tm-n{width:38px;height:38px;font-size:.95rem}
+  .tm-name{font-size:.95rem;overflow-wrap:break-word}
+}

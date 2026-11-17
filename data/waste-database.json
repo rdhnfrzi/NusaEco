@@ -1,0 +1,413 @@
+{
+ "_note": "Database demo untuk simulasi klasifikasi NUSA ECO. Bukan hasil model computer vision.",
+ "items": [
+  {
+   "id": 1,
+   "name": "Kulit Pisang",
+   "keywords": [
+    "kulit pisang",
+    "banana peel"
+   ],
+   "category": "organik",
+   "categoryLabel": "Sampah Organik",
+   "confidence": 98,
+   "description": "Sisa buah yang mudah terurai secara alami.",
+   "recommendation": "Pisahkan dan manfaatkan sebagai bahan kompos.",
+   "material": null
+  },
+  {
+   "id": 2,
+   "name": "Sisa Nasi",
+   "keywords": [
+    "sisa nasi",
+    "nasi",
+    "sisa makanan"
+   ],
+   "category": "organik",
+   "categoryLabel": "Sampah Organik",
+   "confidence": 96,
+   "description": "Sisa makanan dari kantin yang cepat membusuk.",
+   "recommendation": "Kumpulkan di wadah organik untuk kompos atau pakan maggot.",
+   "material": null
+  },
+  {
+   "id": 3,
+   "name": "Daun Kering",
+   "keywords": [
+    "daun kering",
+    "daun",
+    "dedaunan"
+   ],
+   "category": "organik",
+   "categoryLabel": "Sampah Organik",
+   "confidence": 97,
+   "description": "Sisa tumbuhan dari halaman sekolah.",
+   "recommendation": "Jadikan kompos atau mulsa untuk tanaman sekolah.",
+   "material": null
+  },
+  {
+   "id": 4,
+   "name": "Kulit Jeruk",
+   "keywords": [
+    "kulit jeruk",
+    "jeruk",
+    "orange peel"
+   ],
+   "category": "organik",
+   "categoryLabel": "Sampah Organik",
+   "confidence": 95,
+   "description": "Kulit buah yang dapat terurai, aromanya cukup kuat.",
+   "recommendation": "Cacah kecil lalu masukkan ke komposter.",
+   "material": null
+  },
+  {
+   "id": 5,
+   "name": "Sisa Sayur",
+   "keywords": [
+    "sisa sayur",
+    "sayuran",
+    "potongan sayur"
+   ],
+   "category": "organik",
+   "categoryLabel": "Sampah Organik",
+   "confidence": 96,
+   "description": "Potongan sayur dari kantin atau praktik memasak.",
+   "recommendation": "Kumpulkan untuk kompos dan jauhkan dari plastik.",
+   "material": null
+  },
+  {
+   "id": 6,
+   "name": "Ampas Kopi dan Teh",
+   "keywords": [
+    "ampas kopi",
+    "ampas teh",
+    "teh celup bekas"
+   ],
+   "category": "organik",
+   "categoryLabel": "Sampah Organik",
+   "confidence": 92,
+   "description": "Ampas minuman yang dapat menjadi pupuk.",
+   "recommendation": "Campurkan ke kompos; pastikan kantong teh tidak berplastik.",
+   "material": null
+  },
+  {
+   "id": 7,
+   "name": "Cangkang Telur",
+   "keywords": [
+    "cangkang telur",
+    "kulit telur"
+   ],
+   "category": "organik",
+   "categoryLabel": "Sampah Organik",
+   "confidence": 94,
+   "description": "Cangkang yang terurai dan menambah mineral pada kompos.",
+   "recommendation": "Hancurkan lalu campurkan ke kompos.",
+   "material": null
+  },
+  {
+   "id": 8,
+   "name": "Rumput Potong",
+   "keywords": [
+    "rumput",
+    "rumput potong"
+   ],
+   "category": "organik",
+   "categoryLabel": "Sampah Organik",
+   "confidence": 95,
+   "description": "Sisa pangkasan rumput taman sekolah.",
+   "recommendation": "Keringkan sebentar lalu jadikan kompos.",
+   "material": null
+  },
+  {
+   "id": 9,
+   "name": "Botol Plastik",
+   "keywords": [
+    "botol plastik",
+    "botol minuman",
+    "botol aqua"
+   ],
+   "category": "anorganik",
+   "categoryLabel": "Sampah Anorganik",
+   "confidence": 96,
+   "description": "Material plastik yang dapat didaur ulang.",
+   "recommendation": "Kosongkan, bersihkan, dan setorkan ke bank sampah.",
+   "material": "Plastik"
+  },
+  {
+   "id": 10,
+   "name": "Gelas Plastik",
+   "keywords": [
+    "gelas plastik",
+    "cup plastik",
+    "gelas air mineral"
+   ],
+   "category": "anorganik",
+   "categoryLabel": "Sampah Anorganik",
+   "confidence": 94,
+   "description": "Gelas sekali pakai berbahan plastik.",
+   "recommendation": "Bilas, tumpuk rapi, lalu setorkan.",
+   "material": "Plastik"
+  },
+  {
+   "id": 11,
+   "name": "Kantong Plastik",
+   "keywords": [
+    "kantong plastik",
+    "kresek",
+    "plastik kresek"
+   ],
+   "category": "anorganik",
+   "categoryLabel": "Sampah Anorganik",
+   "confidence": 90,
+   "description": "Kantong tipis yang sering lolos dari pemilahan.",
+   "recommendation": "Gunakan ulang; jika bersih dan kering, setorkan.",
+   "material": "Plastik"
+  },
+  {
+   "id": 12,
+   "name": "Tutup Botol",
+   "keywords": [
+    "tutup botol"
+   ],
+   "category": "anorganik",
+   "categoryLabel": "Sampah Anorganik",
+   "confidence": 91,
+   "description": "Tutup plastik berukuran kecil.",
+   "recommendation": "Kumpulkan dalam wadah terpisah lalu setorkan.",
+   "material": "Plastik"
+  },
+  {
+   "id": 13,
+   "name": "Sedotan Plastik",
+   "keywords": [
+    "sedotan",
+    "sedotan plastik"
+   ],
+   "category": "anorganik",
+   "categoryLabel": "Sampah Anorganik",
+   "confidence": 88,
+   "description": "Plastik kecil sekali pakai yang sulit dipilah.",
+   "recommendation": "Kurangi pemakaian; setorkan hanya jika bersih.",
+   "material": "Plastik"
+  },
+  {
+   "id": 14,
+   "name": "Kaleng Minuman",
+   "keywords": [
+    "kaleng",
+    "kaleng minuman",
+    "kaleng soda"
+   ],
+   "category": "anorganik",
+   "categoryLabel": "Sampah Anorganik",
+   "confidence": 97,
+   "description": "Kaleng logam yang bernilai tinggi untuk didaur ulang.",
+   "recommendation": "Kosongkan, penyokkan, lalu setorkan.",
+   "material": "Logam"
+  },
+  {
+   "id": 15,
+   "name": "Kaleng Makanan",
+   "keywords": [
+    "kaleng makanan",
+    "kaleng sarden"
+   ],
+   "category": "anorganik",
+   "categoryLabel": "Sampah Anorganik",
+   "confidence": 93,
+   "description": "Kaleng logam bekas kemasan makanan.",
+   "recommendation": "Bersihkan sisa makanan lalu setorkan.",
+   "material": "Logam"
+  },
+  {
+   "id": 16,
+   "name": "Botol Kaca",
+   "keywords": [
+    "botol kaca",
+    "botol sirup",
+    "toples kaca"
+   ],
+   "category": "anorganik",
+   "categoryLabel": "Sampah Anorganik",
+   "confidence": 95,
+   "description": "Kaca dapat didaur ulang berkali-kali.",
+   "recommendation": "Bilas, hati-hati pecah, dan setorkan terpisah.",
+   "material": "Kaca"
+  },
+  {
+   "id": 17,
+   "name": "Ecobrick (Botol Berisi Plastik)",
+   "keywords": [
+    "ecobrick",
+    "eco brick",
+    "botol isi plastik"
+   ],
+   "category": "anorganik",
+   "categoryLabel": "Sampah Anorganik",
+   "confidence": 93,
+   "description": "Botol berisi plastik bersih yang dipadatkan.",
+   "recommendation": "Padatkan hingga keras, lalu setorkan sebagai ecobrick.",
+   "material": "Ecobrick"
+  },
+  {
+   "id": 18,
+   "name": "Kardus Bekas",
+   "keywords": [
+    "kardus",
+    "dus",
+    "cardboard"
+   ],
+   "category": "kertas",
+   "categoryLabel": "Sampah Kertas",
+   "confidence": 97,
+   "description": "Material berbahan dasar kertas yang dapat didaur ulang.",
+   "recommendation": "Pastikan kering, lipat, lalu setorkan ke bank sampah.",
+   "material": "Kertas"
+  },
+  {
+   "id": 19,
+   "name": "Koran Bekas",
+   "keywords": [
+    "koran",
+    "surat kabar"
+   ],
+   "category": "kertas",
+   "categoryLabel": "Sampah Kertas",
+   "confidence": 97,
+   "description": "Kertas berserat yang mudah didaur ulang.",
+   "recommendation": "Simpan dalam keadaan kering, ikat, lalu setorkan.",
+   "material": "Kertas"
+  },
+  {
+   "id": 20,
+   "name": "Kertas HVS Bekas",
+   "keywords": [
+    "kertas hvs",
+    "kertas bekas",
+    "kertas print"
+   ],
+   "category": "kertas",
+   "categoryLabel": "Sampah Kertas",
+   "confidence": 96,
+   "description": "Kertas tugas atau ujian yang sudah tidak terpakai.",
+   "recommendation": "Kumpulkan dalam map dan lepaskan klip plastik.",
+   "material": "Kertas"
+  },
+  {
+   "id": 21,
+   "name": "Buku Tulis Bekas",
+   "keywords": [
+    "buku tulis",
+    "buku bekas"
+   ],
+   "category": "kertas",
+   "categoryLabel": "Sampah Kertas",
+   "confidence": 94,
+   "description": "Buku dengan halaman kertas yang masih bisa didaur ulang.",
+   "recommendation": "Lepas sampul plastik dan spiral, lalu setorkan.",
+   "material": "Kertas"
+  },
+  {
+   "id": 22,
+   "name": "Brosur dan Pamflet",
+   "keywords": [
+    "brosur",
+    "pamflet",
+    "flyer"
+   ],
+   "category": "kertas",
+   "categoryLabel": "Sampah Kertas",
+   "confidence": 93,
+   "description": "Selebaran kertas bekas kegiatan sekolah.",
+   "recommendation": "Kumpulkan dalam keadaan kering lalu setorkan.",
+   "material": "Kertas"
+  },
+  {
+   "id": 23,
+   "name": "Kemasan Sachet",
+   "keywords": [
+    "sachet",
+    "kemasan sachet"
+   ],
+   "category": "residu",
+   "categoryLabel": "Sampah Residu",
+   "confidence": 93,
+   "description": "Kemasan berlapis yang sulit didaur ulang melalui pengelolaan biasa.",
+   "recommendation": "Kurangi penggunaannya dan buang ke tempat sampah residu.",
+   "material": null
+  },
+  {
+   "id": 24,
+   "name": "Tisu Bekas",
+   "keywords": [
+    "tisu",
+    "tisu bekas",
+    "tissue"
+   ],
+   "category": "residu",
+   "categoryLabel": "Sampah Residu",
+   "confidence": 95,
+   "description": "Tisu terkontaminasi tidak dapat didaur ulang.",
+   "recommendation": "Buang ke tempat sampah residu.",
+   "material": null
+  },
+  {
+   "id": 25,
+   "name": "Styrofoam",
+   "keywords": [
+    "styrofoam",
+    "sterofom",
+    "kotak styrofoam"
+   ],
+   "category": "residu",
+   "categoryLabel": "Sampah Residu",
+   "confidence": 92,
+   "description": "Busa plastik ringan yang sulit didaur ulang.",
+   "recommendation": "Hindari pemakaiannya; buang ke tempat sampah residu.",
+   "material": null
+  },
+  {
+   "id": 26,
+   "name": "Puntung Rokok",
+   "keywords": [
+    "puntung rokok",
+    "rokok"
+   ],
+   "category": "residu",
+   "categoryLabel": "Sampah Residu",
+   "confidence": 90,
+   "description": "Filter rokok berserat plastik yang tidak dapat didaur ulang.",
+   "recommendation": "Buang ke tempat sampah residu, jangan ke tanah.",
+   "material": null
+  },
+  {
+   "id": 27,
+   "name": "Masker Bekas",
+   "keywords": [
+    "masker",
+    "masker bekas"
+   ],
+   "category": "residu",
+   "categoryLabel": "Sampah Residu",
+   "confidence": 91,
+   "description": "Masker sekali pakai yang tidak dapat didaur ulang.",
+   "recommendation": "Gunting tali, lipat, lalu buang ke tempat sampah residu.",
+   "material": null
+  },
+  {
+   "id": 28,
+   "name": "Bungkus Snack Berlapis",
+   "keywords": [
+    "bungkus snack",
+    "bungkus chiki",
+    "kemasan snack"
+   ],
+   "category": "residu",
+   "categoryLabel": "Sampah Residu",
+   "confidence": 92,
+   "description": "Kemasan metalik berlapis yang sulit didaur ulang.",
+   "recommendation": "Kurangi jajanan berkemasan; buang ke tempat sampah residu.",
+   "material": null
+  }
+ ]
+}

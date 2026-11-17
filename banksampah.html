@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>EcoSekolah – Bank Sampah</title>
+    <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f7f8f4;
+            --card: #ffffff;
+            --tx: #123d2b;
+            --mu: #59665e;
+            --pr: #236b45;
+            --accent: #80b98a;
+            --on: #ffffff;
+            --soft: #dcebdd;
+            --bd: #e2e9df;
+            --shadow: 0 18px 40px -24px rgba(18, 61, 43, 0.14);
+            color-scheme: light;
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            background: var(--bg);
+            background-image: radial-gradient(circle at 85% 12%, rgba(220, 235, 221, 0.6) 0%, transparent 45%),
+                              radial-gradient(circle at 12% 85%, rgba(128, 185, 138, 0.18) 0%, transparent 40%);
+            color: var(--tx);
+            font: 16px/1.65 'Inter', system-ui, -apple-system, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header & Navigasi Lengkap seperti Beranda */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(247, 248, 244, 0.85);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--bd);
+        }
+
+        .bar {
+            max-width: 1160px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 14px 24px;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font: 800 20px/1 'Plus Jakarta Sans', sans-serif;
+            color: var(--tx);
+            text-decoration: none;
+            white-space: nowrap;
+            letter-spacing: -0.02em;
+        }
+
+        nav {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            align-items: center;
+            background: var(--card);
+            padding: 5px;
+            border-radius: 999px;
+            border: 1px solid var(--bd);
+            box-shadow: 0 4px 16px -8px rgba(18, 61, 43, 0.08);
+        }
+        nav a {
+            padding: 8px 15px;
+            border-radius: 999px;
+            color: var(--mu);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: all 0.25s ease;
+        }
+        nav a:hover {
+            color: var(--tx);
+            background: rgba(220, 235, 221, 0.45);
+        }
+        nav a.on {
+            background: var(--soft);
+            color: var(--pr);
+            font-weight: 700;
+        }
+        nav a.btn-nav {
+            background: var(--pr);
+            color: var(--on);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            padding: 8px 18px;
+            margin-left: 4px;
+            box-shadow: 0 8px 18px -6px rgba(35, 107, 69, 0.45);
+        }
+        nav a.btn-nav:hover {
+            background: #1b5637;
+            color: var(--on);
+            transform: translateY(-1px);
+        }
+
+        /* Main Area */
+        main {
+            max-width: 760px;
+            width: 100%;
+            margin: auto;
+            padding: 56px 24px 80px;
+            flex: 1;
+        }
+
+        h2 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: clamp(32px, 4.5vw, 46px);
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            line-height: 1.15;
+            margin: 0 0 12px;
+            color: var(--tx);
+        }
+
+        .mu {
+            color: var(--mu);
+            font-size: 16px;
+            margin-bottom: 28px;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card);
+            border: 1px solid var(--bd);
+            border-radius: 24px;
+            padding: 28px 32px;
+            margin-bottom: 22px;
+            box-shadow: var(--shadow);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        main > .card:first-of-type {
+            background: var(--soft);
+            border: 1px solid rgba(35, 107, 69, 0.18);
+            border-left: 5px solid var(--pr);
+            padding: 18px 24px;
+            border-radius: 18px;
+            font-size: 14.5px;
+            color: var(--tx);
+        }
+        main > .card:first-of-type b {
+            color: var(--pr);
+        }
+        main > .card:first-of-type a {
+            color: var(--pr);
+            font-weight: 600;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        /* Form Controls */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--tx);
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 13px 16px;
+            border: 1.5px solid var(--bd);
+            border-radius: 14px;
+            background: var(--bg);
+            color: var(--tx);
+            font: inherit;
+            font-size: 15px;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+            outline: none;
+        }
+
+        input:focus, select:focus {
+            border-color: var(--pr);
+            background: #ffffff;
+            box-shadow: 0 0 0 4px rgba(35, 107, 69, 0.12);
+        }
+
+        button {
+            margin-top: 8px;
+            background: var(--pr);
+            color: var(--on);
+            border: none;
+            padding: 15px 24px;
+            border-radius: 999px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+            box-shadow: 0 12px 24px -10px rgba(35, 107, 69, 0.55);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        }
+        button:hover {
+            background: #1b5637;
+            transform: translateY(-2px);
+            box-shadow: 0 16px 28px -10px rgba(35, 107, 69, 0.65);
+        }
+        button:active {
+            transform: translateY(0);
+        }
+
+        .alert {
+            background: var(--soft);
+            color: var(--pr);
+            border: 1px solid var(--accent);
+            padding: 14px 18px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            font-size: 14.5px;
+            font-weight: 600;
+            display: none;
+        }
+        .alert.show { display: block; }
+        .alert.info { background: #f3f1e4; border-color: #d9c98a; color: #5c4a12; }
+        .alert.err { background: #fbeae7; border-color: #e3a59b; color: #8f2f22; }
+        .alert a.ne-pill { margin-top: 8px; background: rgba(255,255,255,.55); }
+        button:disabled { opacity: .6; cursor: not-allowed; transform: none; }
+
+        @media (max-width: 960px) {
+            .bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+            nav { width: 100%; overflow-x: auto; flex-wrap: nowrap; }
+            main { padding: 36px 16px 60px; }
+            .card { padding: 22px 20px; border-radius: 20px; }
+        }
+    </style>
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/transitions.css">
+<script src="js/transitions.js" defer></script>
+</head>
+<body class="dc-sides">
+    <div class="sn" role="navigation" aria-label="Navigasi utama"><div class="wrap"><a class="logo" href="index.html#beranda" aria-label="NUSA ECO beranda"><svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3c11 3 17 12 15 22-1 7-7 12-15 12S5 32 5 24C5 13 11 6 20 3z" fill="#236B45"/><path d="M20 12v22M20 22l-7-6M20 27l8-7" stroke="#DCEBDD" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg> NUSA ECO</a><button class="burger" id="bg" aria-label="Buka menu" aria-expanded="false"><i></i><i></i><i></i></button><div class="links" id="lk"><span class="ind" id="ind" aria-hidden="true"></span><a class="l" href="index.html#beranda">Beranda</a><a class="l" href="index.html#edukasi">Edukasi</a><a class="l sp" href="index.html#tentang">Tentang Kami</a><a class="l" href="dashboard.html">Dashboard</a><a class="l on" href="banksampah.html" aria-current="page">Bank Sampah</a><a class="l" href="ecopoint-impact.html">Eco Impact</a><a class="sn-cta" href="scan-sampah.html">Scan Sampah</a></div></div></div>
+
+    <main>
+        <h2>Input Penyetoran Sampah</h2>
+        <p class="mu" style="margin-top:0">Catat setoran tambahan siswa. Angka acuan studi kasus di dashboard tetap terpisah dan tidak berubah oleh input lokal ini.</p><div class="card"><b>Data acuan bulanan:</b> 170 kg terkumpul · 380 dari 450 siswa aktif · 75–80% dikelola dengan prinsip 3R. <a class="ne-link ne-link--arrow" href="dashboard.html">Lihat rincian</a></div>
+
+        <div id="alertBox" class="alert" role="status" aria-live="polite"></div>
+
+        <div class="card">
+            <form id="wasteForm">
+                <div class="form-group">
+                    <label for="nama">Nama Siswa</label>
+                    <input type="text" id="nama" required placeholder="Contoh: Budi Santoso">
+                </div>
+                <div class="form-group">
+                    <label for="kelas">Kelas</label>
+                    <input type="text" id="kelas" required placeholder="Contoh: X Jurusan">
+                </div>
+                <div class="form-group">
+                    <label for="jenis">Jenis Sampah</label>
+                    <select id="jenis">
+                        <option value="Organik">Organik (50 poin/kg)</option>
+                        <option value="Anorganik">Anorganik (50 poin/kg)</option>
+                        <option value="Residu">Residu (50 poin/kg)</option>
+                        <option value="Plastik">Plastik (100 poin/kg)</option>
+                        <option value="Kertas">Kertas (60 poin/kg)</option>
+                        <option value="Logam">Logam (150 poin/kg)</option>
+                        <option value="Kaca">Kaca (40 poin/kg)</option>
+                        <option value="Ecobrick">Ecobrick (120 poin/kg)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="kg">Berat (kg)</label>
+                    <input type="number" id="kg" step="0.1" min="0.1" required placeholder="Contoh: 1.5">
+                    <p class="mu" id="poinPreview" aria-live="polite" style="margin:8px 0 0;font-size:14px"></p>
+                </div>
+                <button type="submit">Simpan & Tambah Poin</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="ne-footer"><p>©Disuruh Ngikut | SMKN 4 Kuningan</p></footer>
+
+    <script src="js/storage.js"></script>
+    <script src="js/bank-sampah.js"></script>
+<script src="js/navbar.js"></script>
+<script>
+/* Prefill dari Scan Sampah (tidak mengubah mekanisme LocalStorage di atas) */
+(function(){
+  var p=new URLSearchParams(location.search);if(p.get('from')!=='scan')return;
+  var sel=document.getElementById('jenis'),form=document.getElementById('wasteForm');if(!sel||!form)return;
+  var m=p.get('material')||'',item=p.get('item')||'sampah',cat=p.get('cat')||'';
+  var ok=[].some.call(sel.options,function(o){return o.value===m});
+  var box=document.createElement('div');box.className='card';box.setAttribute('role','status');
+  var b=document.createElement('b');b.textContent='Dari Scan Sampah: ';box.appendChild(b);
+  if(ok){sel.value=m;sel.dispatchEvent(new Event('change'));box.appendChild(document.createTextNode(item+' dikenali sebagai material '+m+'. Jenis sampah diisi otomatis; periksa kembali sebelum menyimpan.'))}
+  else{
+    var ph=new Option('Pilih jenis material…','',true,true);ph.disabled=true;sel.insertBefore(ph,sel.firstChild);sel.required=true;sel.selectedIndex=0;
+    box.appendChild(document.createTextNode(item+(cat?' (kategori '+cat+')':'')+' belum punya jenis material setoran yang pasti. Pilih jenis material terlebih dahulu sebelum menyimpan.'));
+  }
+  form.closest('.card').before(box);
+})();
+</script>
+</body>
+</html>

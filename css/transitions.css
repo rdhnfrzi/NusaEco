@@ -1,0 +1,58 @@
+/* NUSA ECO — page entrance & page transition (transform/opacity saja, tanpa layout shift) */
+:root {
+  --ne-ease: cubic-bezier(.2, .7, .2, 1);
+  --ne-dur: .55s;
+  --ne-step: 70ms;   /* jeda stagger antar blok */
+  --ne-exit: .23s;   /* harus sama dengan EXIT_MS di js/transitions.js */
+}
+
+@keyframes ne-rise { from { opacity: 0; transform: translate3d(0, 16px, 0); } }
+@keyframes ne-fade { from { opacity: 0; } }
+
+/* ---- Masuk: blok utama tiap halaman muncul berurutan (fill-mode backwards = tidak ada state macet) ---- */
+body > main:not(.has-views) > *,
+.ne-in {
+  animation: ne-rise var(--ne-dur) var(--ne-ease) backwards;
+  animation-delay: calc(var(--ne-i, 0) * var(--ne-step));
+}
+body > main > :nth-child(1) { --ne-i: 0; }
+body > main > :nth-child(2) { --ne-i: 1; }
+body > main > :nth-child(3) { --ne-i: 2; }
+body > main > :nth-child(4) { --ne-i: 3; }
+body > main > :nth-child(5) { --ne-i: 4; }
+body > main > :nth-child(n+6) { --ne-i: 5; }
+
+/* Eco Impact: kartu dianimasikan satu per satu, bukan grid sekaligus */
+.eco-section > .eco-grid { animation: none; }
+.eco-grid > .eco-card { animation: ne-rise var(--ne-dur) var(--ne-ease) backwards; }
+.eco-grid > .eco-card:nth-child(1) { animation-delay: calc(var(--ne-step) * 2); }
+.eco-grid > .eco-card:nth-child(2) { animation-delay: calc(var(--ne-step) * 3); }
+
+/* Beranda & Edukasi: ilustrasi hero masuk dengan fade lembut (tidak menyentuh transform paralaks) */
+.hero .art { animation: ne-fade .8s ease .22s backwards; }
+.view.on { animation-duration: var(--ne-dur); }
+
+/* Kartu tim / elemen yang diberi .ne-in secara manual */
+.ne-in { animation-name: ne-rise; }
+
+/* ---- Keluar: konten memudar & naik sedikit; navbar tetap diam supaya terasa satu pengalaman ---- */
+body > main,
+body > footer {
+  transition: opacity var(--ne-exit) ease-in, transform var(--ne-exit) ease-in;
+}
+html.ne-leaving body > main,
+html.ne-leaving body > footer {
+  opacity: 0;
+  transform: translate3d(0, -8px, 0) scale(.995);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body > main:not(.has-views) > *,
+  .ne-in,
+  .eco-grid > .eco-card,
+  .hero .art { animation: none !important; }
+  body > main, body > footer { transition: none !important; }
+  html.ne-leaving body > main,
+  html.ne-leaving body > footer { transform: none; }
+}

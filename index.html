@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NUSA ECO — Small Waste, Big Change</title>
+<link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/transitions.css">
+<script src="js/transitions.js" defer></script>
+</head>
+<body>
+<div class="sn" role="navigation" aria-label="Navigasi utama"><div class="wrap"><a class="logo" href="#beranda" aria-label="NUSA ECO beranda"><svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3c11 3 17 12 15 22-1 7-7 12-15 12S5 32 5 24C5 13 11 6 20 3z" fill="#236B45"/><path d="M20 12v22M20 22l-7-6M20 27l8-7" stroke="#DCEBDD" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg> NUSA ECO</a><button class="burger" id="bg" aria-label="Buka menu" aria-expanded="false"><i></i><i></i><i></i></button><div class="links" id="lk"><span class="ind" id="ind" aria-hidden="true"></span><a class="l" data-r="beranda" href="#beranda">Beranda</a><a class="l" data-r="edukasi" href="#edukasi">Edukasi</a><a class="l sp" data-r="tentang" href="#tentang">Tentang Kami</a><a class="l" href="dashboard.html">Dashboard</a><a class="l" href="banksampah.html">Bank Sampah</a><a class="l" href="ecopoint-impact.html">Eco Impact</a><a class="sn-cta" href="scan-sampah.html">Scan Sampah</a></div></div></div>
+
+<main class="has-views">
+<div class="view" id="v-beranda">
+<section class="hero dc dc-curve-bl"><div class="wrap hgrid">
+<div>
+<span class="tag">Gerakan Bank Sampah Sekolah</span>
+<h1>Your Waste Today, <em>A Better Earth Tomorrow.</em></h1>
+<p class="sub">Setiap sampah memiliki potensi. Melalui NUSA ECO, kita belajar memilah, mengelola, dan mengubah sampah menjadi sesuatu yang lebih bernilai.</p>
+<div class="row"><a class="btn" href="#statistik">Jelajahi NUSA ECO</a><a class="btn o" href="#edukasi">Pelajari Cara Memilah</a></div>
+</div>
+<div class="art" id="art"><div class="blob"></div>
+<svg viewBox="0 0 400 420" aria-label="Ilustrasi daun besar" role="img">
+<g transform="translate(200 202) scale(1.3)"><path d="M0-95C70-70 105-10 90 50 78 100 40 120 0 120S-78 100-90 50C-105-10-70-70 0-95z" fill="#DCEBDD" opacity=".92"/><path d="M0-80V115M0-20-45-60M0 20 50-25M0 62-38 30" stroke="#236B45" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+
+</svg>
+<div class="chip" style="left:-4%;top:18%"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#236B45" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 19H4l-2-3 3-5M7 19l3 4M10 5l2-3 4 0 2 4M20 11l2 3-3 5H12"/></svg><span>Pilah dulu<small>4 kategori sampah</small></span></div>
+<div class="chip" style="right:-2%;bottom:24%"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#236B45" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10M12 10c0-4 3-6 8-6 0 5-2 8-8 6zM12 14c0-3-2-5-7-5 0 4 2 6 7 5z"/></svg><span>Small Waste<small>Big Change.</small></span></div>
+</div>
+</div></section>
+
+<section class="stats dc dc-geo-tr" id="statistik"><div class="wrap">
+<h2>Small Actions, Real Impact.</h2>
+<div class="demo" role="note"><span>Sumber: model studi kasus standar dan acuan rata-rata implementasi program Sekolah Adiwiyata (Bank Sampah Sekolah).</span><a class="ne-pill" href="dashboard.html">Lihat dashboard dan rincian data</a></div>
+<div class="sg">
+<div class="sc rv"><h3>Sampah terkumpul</h3><div class="num"><span data-metric="totalKg" data-c="170">0</span> kg</div><p>per bulan</p></div>
+<div class="sc rv"><h3>Dikelola dengan prinsip 3R</h3><div class="num"><span data-metric="managedPct" data-c="77.5">0</span>%</div><p>Rentang acuan: 75–80%</p></div>
+<div class="sc rv"><h3>Siswa aktif</h3><div class="num"><span data-metric="activeMembers" data-c="380">0</span></div><p>dari 450 siswa</p></div>
+<div class="sc rv"><h3>Tingkat partisipasi</h3><div class="num"><span data-metric="participationPct" data-c="84.4">0</span>%</div><p>380 siswa tercatat aktif</p></div>
+<div class="cc">
+<figure class="chc rv"><figcaption>Komposisi sampah terkumpul</figcaption><small>Jumlah per kategori · kg/bulan</small><div class="cbox"><canvas id="ch1" role="img" aria-label="Komposisi: organik 85 kg, kertas 45 kg, plastik 30 kg, logam dan kaca 10 kg"></canvas></div></figure>
+<figure class="chc rv"><figcaption>Status pengelolaan 3R</figcaption><small>Estimasi tengah rentang acuan 75–80% dikelola dan 20–25% residu</small><div class="cbox"><canvas id="ch2" role="img" aria-label="Sekitar 77,5 persen dikelola dan 22,5 persen residu"></canvas></div></figure>
+</div>
+<div class="sc rv" style="grid-column:1/-1"><h3>Rincian berat per kategori</h3><ul class="cl"><li><b>Organik</b><span class="kg">85 kg</span><small>100% diolah menjadi kompos</small></li><li><b>Kertas</b><span class="kg">45 kg</span></li><li><b>Plastik</b><span class="kg">30 kg</span></li><li><b>Logam &amp; Kaca</b><span class="kg">10 kg</span></li></ul></div>
+</div></div></section>
+
+<section class="dc dc-leaf-bl"><div class="wrap cg">
+<div class="rv"><h2>One School, One Movement, A Greener Future.</h2><p style="margin-top:24px">Setiap hari sekolah menghasilkan sampah dari kelas, lapangan, dan kantin. Tanpa dipilah, semuanya bercampur dan kehilangan nilainya. Gerakan ini dimulai dari kebiasaan kecil kita.</p></div>
+<div class="prob">
+<div class="pr rv"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M8 2h8M9 2v4l-2 4v11a1 1 0 001 1h8a1 1 0 001-1V10l-2-4V2"/></svg></div><div><h3>Plastik sekali pakai</h3><p>Botol, sedotan, dan kemasan jajanan menumpuk setiap hari.</p></div></div>
+<div class="pr rv"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8zM14 2v6h6"/></svg></div><div><h3>Kertas tak termanfaatkan</h3><p>Kertas bekas ujian dan tugas dibuang padahal bisa didaur ulang.</p></div></div>
+<div class="pr rv"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 20V10M12 10c0-4 3-6 8-6 0 5-2 8-8 6zM12 14c0-3-2-5-7-5 0 4 2 6 7 5z"/></svg></div><div><h3>Organik dari kantin</h3><p>Sisa makanan dan kulit buah bisa jadi kompos.</p></div></div>
+<div class="pr rv"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"/></svg></div><div><h3>Membuang tanpa memilah</h3><p>Satu tempat sampah untuk semua jenis membuat daur ulang gagal.</p></div></div>
+</div></div></section>
+
+<section id="tentang" class="dc dc-sprig-bl"><div class="wrap ab rv">
+<div><h2>Tentang Kami</h2></div>
+<div><p>NUSA ECO adalah platform digital bank sampah sekolah yang mengajak siswa memilah, mengumpulkan, dan mengelola sampah secara bertanggung jawab. Sampah yang terkumpul punya nilai ekonomi sekaligus memberi dampak baik bagi lingkungan sekolah.</p></div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap"><div class="cta rv">
+<svg viewBox="0 0 200 200" aria-hidden="true"><path d="M100 10C160 30 190 80 180 130 170 170 135 190 100 190S30 170 20 130C10 80 40 30 100 10z" fill="#fff"/></svg>
+<h2 style="max-width:14ch">Be Part of the Green Generation.</h2>
+<div class="team">
+<p class="team-id">Disuruh Ngikut | SMKN 4 Kuningan</p>
+<ol class="team-list" aria-label="Anggota tim">
+<li class="tm" tabindex="0"><span class="tm-n" aria-hidden="true"></span><span class="tm-name">Muhammad Ridhan AisyFarizi</span><span class="tm-lf" aria-hidden="true"></span></li>
+<li class="tm" tabindex="0"><span class="tm-n" aria-hidden="true"></span><span class="tm-name">Satria Putra Anugrah</span><span class="tm-lf" aria-hidden="true"></span></li>
+<li class="tm" tabindex="0"><span class="tm-n" aria-hidden="true"></span><span class="tm-name">Almahesa</span><span class="tm-lf" aria-hidden="true"></span></li>
+</ol>
+</div>
+<a class="btn w" href="scan-sampah.html">Gabung Gerakan NUSA ECO</a></div></div></section>
+</div>
+
+<div class="view" id="v-edukasi">
+<section class="hero" style="padding-bottom:0"><div class="wrap hgrid">
+<div><span class="tag">Pusat Edukasi</span><h1>Know Your Waste, Change Your World.</h1>
+<p class="sub">Kenali jenis sampah, pelajari cara memilahnya, dan temukan bagaimana tindakan sederhana dapat menciptakan lingkungan yang lebih baik.</p></div>
+<div class="art" style="max-width:380px"><div class="blob"></div><svg viewBox="0 0 400 420" aria-hidden="true"><g transform="translate(200 210)"><path d="M0-130C95-95 140-10 120 70 105 135 55 160 0 160S-105 135-120 70C-140-10-95-95 0-130z" fill="#DCEBDD"/><path d="M0-105V150M0-30-60-85M0 30 68-30M0 85-52 40" stroke="#236B45" stroke-width="6" stroke-linecap="round" fill="none"/></g></svg></div>
+</div></section>
+
+<section class="dc dc-sprig-bl" style="padding-top:40px"><div class="wrap">
+<h2 class="rv">Empat jenis sampah, empat cara berbeda.</h2>
+<div class="ecards" id="ec"></div></div></section>
+
+<section id="simulasi" style="padding-top:0"><div class="wrap"><div class="simw">
+<h2>Where Does Your Waste Belong?</h2>
+<p style="margin-top:14px">Pilih tempat sampah yang tepat untuk setiap barang. Ada 10 barang, selamat mencoba.</p>
+<div id="sim" class="sim" aria-live="polite"></div></div></div></section>
+
+<section class="dc dc-leaf-tr"><div class="wrap">
+<h2>Dari Sampah Jadi Bernilai.</h2><p style="margin-top:14px">Lima tahap pengelolaan sampah di bank sampah sekolah.</p>
+<div class="steps">
+<div class="st rv"><div class="n">01</div><h3>Kumpulkan</h3><p>Mengumpulkan sampah yang sudah dipilah.</p></div>
+<div class="st rv"><div class="n">02</div><h3>Pilah</h3><p>Memastikan sampah sesuai kategori.</p></div>
+<div class="st rv"><div class="n">03</div><h3>Timbang</h3><p>Menimbang sampah yang disetorkan.</p></div>
+<div class="st rv"><div class="n">04</div><h3>Catat</h3><p>Mencatat jumlah dan jenis sampah.</p></div>
+<div class="st rv"><div class="n">05</div><h3>Daur Ulang</h3><p>Menyalurkan sampah untuk daur ulang atau pengolahan yang sesuai.</p></div>
+</div></div></section>
+
+<section style="padding-top:0"><div class="wrap"><div class="cta rv">
+<h2>Start Sorting. Start Caring.</h2><p>Satu simulasi singkat cukup untuk mengubah kebiasaan membuang sampah.</p>
+<a class="btn w" href="scan-sampah.html" id="goSim">Coba Simulasi Sekarang</a></div></div></section>
+</div>
+</main>
+<footer class="ne-footer"><p>©Disuruh Ngikut | SMKN 4 Kuningan</p></footer>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="js/case-study-data.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/simulation.js"></script>
+<script src="js/interactions.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/main.js"></script>  
+</body>
+</html>

@@ -1,0 +1,61 @@
+/* NUSA ECO — motion system (transform/opacity only) */
+@keyframes up{from{opacity:0;transform:translateY(26px)}}
+@keyframes viewin{from{opacity:0;transform:translateY(12px)}}
+@keyframes float{50%{transform:translateY(-14px) rotate(1.2deg)}}
+@keyframes bob{50%{transform:translateY(-8px)}}
+@keyframes rp{to{transform:scale(1);opacity:0}}
+@keyframes shake{20%,60%{transform:translateX(-7px)}40%,80%{transform:translateX(7px)}}
+@keyframes okp{40%{transform:scale(1.06)}}
+@keyframes slidein{from{opacity:0;transform:translateX(24px)}}
+@keyframes fall{to{transform:translate(var(--dx),105vh) rotate(var(--r));opacity:0}}
+@keyframes leave{to{opacity:0;transform:scale(.96)}}
+.view.on{animation:viewin .5s cubic-bezier(.2,.7,.2,1) backwards}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1) var(--d,0s),transform .8s cubic-bezier(.2,.7,.2,1) var(--d,0s)}
+.rv.v-l{transform:translateX(-32px)}.rv.v-s{transform:scale(.92)}.rv.v-u{transform:translateY(40px)}
+.rv.in{opacity:1;transform:none}
+.hero .hgrid>div:first-child>*{animation:up .9s cubic-bezier(.2,.7,.2,1) backwards}
+.hero .hgrid>div:first-child>:nth-child(2){animation-delay:.1s}.hero .hgrid>div:first-child>:nth-child(3){animation-delay:.2s}.hero .hgrid>div:first-child>:nth-child(4){animation-delay:.3s}
+.art{transform:translateY(var(--py,0px))}
+.art>svg{animation:float 8s ease-in-out infinite}
+.art .chip{animation:bob 5s ease-in-out infinite}.art .chip:last-child{animation-delay:-2.5s}
+.art.off *{animation-play-state:paused}
+.links{position:relative}
+.links a{position:relative;z-index:1}
+.ind{position:absolute;left:0;top:0;border-radius:999px;background:var(--ss);opacity:0;pointer-events:none;z-index:0;transition:transform .45s cubic-bezier(.3,.8,.2,1),width .45s,height .45s,opacity .3s}
+.ind.on{opacity:1}
+.links a.l.on,.links a.l.on:hover{background:transparent}
+.links a.l:hover{background:color-mix(in srgb,var(--ss) 55%,transparent)}
+.burger{position:relative}
+.burger i{position:absolute;left:12px;right:12px;top:21px;height:2.4px;border-radius:2px;background:currentColor;transition:transform .35s cubic-bezier(.3,.8,.2,1),opacity .2s}
+.burger i:first-child{transform:translateY(-7px)}.burger i:last-child{transform:translateY(7px)}
+.burger[aria-expanded=true] i:first-child{transform:rotate(45deg)}
+.burger[aria-expanded=true] i:nth-child(2){opacity:0}
+.burger[aria-expanded=true] i:last-child{transform:rotate(-45deg)}
+.btn,.bin{position:relative;overflow:hidden;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.bin:active:not(:disabled){transform:scale(.97)}
+.ripple{position:absolute;border-radius:50%;background:currentColor;opacity:.28;transform:scale(0);animation:rp .6s ease-out forwards;pointer-events:none}
+.sc,.pr,.ec{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s,border-color .35s}
+.sc,.pr{border:2px solid transparent}
+@media(hover:hover){.sc:hover,.pr:hover{border-color:var(--fg);box-shadow:0 2px 4px rgba(18,61,43,.06),0 14px 30px -12px rgba(18,61,43,.25),0 32px 60px -30px rgba(18,61,43,.3)}}
+.ecards{align-items:start}
+.ec .dot{transition:transform .4s cubic-bezier(.3,.8,.2,1)}
+.ec[aria-expanded=true] .dot{transform:rotate(-8deg) scale(1.08)}
+.more>div{opacity:0;transform:translateY(-8px);transition:opacity .35s .08s,transform .35s .08s}
+.ec[aria-expanded=true] .more>div{opacity:1;transform:none}
+.cc{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px;grid-column:1/-1;min-width:0}
+.sg>*,.cc>*,.cg>*,.ab>*,.hgrid>*{min-width:0}
+.chc{margin:0;background:var(--card);border-radius:var(--r-m);padding:24px;box-shadow:0 20px 40px -24px rgba(18,61,43,.3)}
+.chc figcaption{font:700 1.1rem "Plus Jakarta Sans",sans-serif}
+.chc small{color:var(--mu);font-size:.82rem}
+.cbox{position:relative;width:100%;height:270px;margin-top:14px}
+.cbox canvas{max-width:100%}
+.sim .item{animation:slidein .45s cubic-bezier(.2,.7,.2,1) backwards}
+.bin.ok{animation:okp .45s}.bin.no{animation:shake .45s}
+.fb{transition:background .3s}.fb.ok{background:rgba(47,154,98,.35)}.fb.no{background:rgba(161,74,61,.35)}
+.fb.show{animation:up .4s backwards}
+.fb .btn{min-height:44px}
+.end{animation:up .6s cubic-bezier(.2,.7,.2,1) backwards}.end.leave{animation:leave .28s forwards}
+.rc{position:relative;height:210px;max-width:520px;margin:0 auto 26px}
+.conf{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:90}
+.conf i{position:absolute;top:-24px;width:12px;height:18px;border-radius:0 100% 0 100%;animation:fall 3s cubic-bezier(.3,.1,.6,1) forwards}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition-duration:.01ms!important;transition-delay:0s!important}.rv,.rv.v-l,.rv.v-s,.rv.v-u{opacity:1!important;transform:none!important}html{scroll-behavior:auto}}

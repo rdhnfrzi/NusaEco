@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUSA ECO — Eco Point & Impact</title>
+    <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+/* ECO POINT & ECO IMPACT — Redesigned with Full Navigation */
+:root {
+    --bg: #f7f8f4;
+    --card: #ffffff;
+    --tx: #123d2b;
+    --mu: #59665e;
+    --green: #236b45;
+    --accent: #80b98a;
+    --soft: #dcebdd;
+    --bd: #e2e9df;
+    --shadow: 0 20px 45px -24px rgba(18, 61, 43, 0.16);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    background-image: radial-gradient(circle at 88% 12%, rgba(220, 235, 221, 0.65) 0%, transparent 45%),
+                      radial-gradient(circle at 10% 85%, rgba(128, 185, 138, 0.18) 0%, transparent 45%);
+    color: var(--tx);
+    font: 16px/1.65 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header & Navigasi Lengkap seperti Beranda */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(247, 248, 244, 0.85);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--bd);
+}
+
+.bar {
+    max-width: 1160px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 14px 24px;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font: 800 20px/1 'Plus Jakarta Sans', sans-serif;
+    color: var(--tx);
+    text-decoration: none;
+    white-space: nowrap;
+    letter-spacing: -0.02em;
+}
+
+nav {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    align-items: center;
+    background: var(--card);
+    padding: 5px;
+    border-radius: 999px;
+    border: 1px solid var(--bd);
+    box-shadow: 0 4px 16px -8px rgba(18, 61, 43, 0.08);
+}
+nav a {
+    padding: 8px 15px;
+    border-radius: 999px;
+    color: var(--mu);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: all 0.25s ease;
+}
+nav a:hover {
+    color: var(--tx);
+    background: rgba(220, 235, 221, 0.45);
+}
+nav a.on {
+    background: var(--soft);
+    color: var(--green);
+    font-weight: 700;
+}
+nav a.btn-nav {
+    background: var(--green);
+    color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    padding: 8px 18px;
+    margin-left: 4px;
+    box-shadow: 0 8px 18px -6px rgba(35, 107, 69, 0.45);
+}
+nav a.btn-nav:hover {
+    background: #1b5637;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+/* SECTION ECO POINT */
+.eco-section {
+    max-width: 1160px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 56px 24px 88px;
+    background: transparent;
+    position: relative;
+    flex: 1;
+}
+
+.eco-heading {
+    max-width: 680px;
+    margin-bottom: 48px;
+}
+
+.eco-label {
+    display: inline-block;
+    padding: 7px 16px;
+    border-radius: 999px;
+    background: var(--soft);
+    color: var(--green);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+.eco-heading h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.08;
+    margin: 18px 0 16px;
+    color: var(--tx);
+}
+
+.eco-heading h2 span {
+    color: var(--green);
+    font-style: italic;
+}
+
+.eco-heading p {
+    color: var(--mu);
+    font-size: 17px;
+    line-height: 1.75;
+    margin: 0;
+}
+
+/* GRID */
+
+.eco-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.eco-card {
+    padding: 38px;
+    border-radius: 28px;
+    min-width: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.eco-card:hover {
+    transform: translateY(-6px);
+}
+
+/* POINT CARD */
+
+.point-card {
+    background: linear-gradient(145deg, #123d2b 0%, #1d593b 100%);
+    color: #ffffff;
+    border: 1px solid rgba(128, 185, 138, 0.25);
+    box-shadow: 0 24px 50px -22px rgba(18, 61, 43, 0.45);
+}
+
+.eco-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.point-card .eco-card-top span:first-child {
+    background: rgba(220, 235, 221, 0.14);
+    color: var(--soft);
+    padding: 6px 14px;
+    border-radius: 999px;
+}
+
+.impact-card .eco-card-top span:first-child {
+    background: var(--soft);
+    color: var(--green);
+    padding: 6px 14px;
+    border-radius: 999px;
+}
+
+.eco-status {
+    font-size: 11px;
+    color: var(--accent);
+    opacity: 0.95;
+}
+
+.point-card h3,
+.impact-card h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(24px, 2.6vw, 30px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    margin: 26px 0 20px;
+}
+
+.point-display {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 26px;
+    padding: 18px 22px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(220, 235, 221, 0.14);
+    border-radius: 20px;
+}
+
+.point-display span {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(46px, 5vw, 60px);
+    font-weight: 800;
+    line-height: 1;
+    color: #80b98a;
+    letter-spacing: -0.03em;
+}
+
+.point-display small {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--soft);
+    opacity: 0.85;
+}
+
+/* FORM */
+
+.point-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.point-form label {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--soft);
+    margin-top: 4px;
+}
+
+.point-form select,
+.point-form input {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 1.5px solid rgba(220, 235, 221, 0.22);
+    background: rgba(18, 61, 43, 0.55);
+    color: #ffffff;
+    outline: none;
+    font: inherit;
+    font-size: 15px;
+    transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.point-form select option {
+    background: #123d2b;
+    color: #ffffff;
+}
+
+.point-form select:focus,
+.point-form input:focus {
+    border-color: var(--accent);
+    background: rgba(18, 61, 43, 0.85);
+    box-shadow: 0 0 0 4px rgba(128, 185, 138, 0.2);
+}
+
+.point-form input::placeholder {
+    color: rgba(220, 235, 221, 0.5);
+}
+
+.point-form button {
+    margin-top: 12px;
+    padding: 15px 24px;
+    border: none;
+    border-radius: 999px;
+    background: #ffffff;
+    color: var(--tx);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.25);
+}
+
+.point-form button:hover {
+    background: var(--soft);
+    transform: translateY(-2px);
+}
+
+.point-info {
+    font-size: 13.5px;
+    color: var(--soft);
+    margin: 20px 0 0;
+    opacity: 0.9;
+}
+
+/* IMPACT CARD */
+
+.impact-card {
+    background: var(--card);
+    border: 1px solid var(--bd);
+    color: var(--tx);
+    box-shadow: var(--shadow);
+}
+
+.impact-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 26px 52px -22px rgba(18, 61, 43, 0.22);
+}
+
+.impact-desc {
+    color: var(--mu);
+    line-height: 1.7;
+    font-size: 15px;
+    margin: 0;
+}
+
+.impact-number {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin: 32px 0 22px;
+    padding: 20px 24px;
+    background: var(--bg);
+    border: 1px solid var(--bd);
+    border-radius: 20px;
+}
+
+.impact-number span {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(48px, 5.2vw, 64px);
+    font-weight: 800;
+    line-height: 1;
+    color: var(--green);
+    letter-spacing: -0.03em;
+}
+
+.impact-number small {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--mu);
+    letter-spacing: 1px;
+}
+
+.impact-progress {
+    height: 12px;
+    background: var(--soft);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.impact-progress-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--green), var(--accent));
+    border-radius: 999px;
+    transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.impact-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 14px;
+    font-size: 13.5px;
+    color: var(--mu);
+}
+
+.impact-footer strong {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--tx);
+    font-weight: 700;
+}
+
+.impact-message {
+    margin-top: 32px;
+    padding: 16px 20px;
+    background: var(--soft);
+    border-left: 4px solid var(--green);
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--tx);
+}
+
+
+/* ===== DATA SETORAN (dari LocalStorage) ===== */
+[hidden] { display: none !important; }
+.sim-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 22px 0 2px;
+    padding-top: 20px;
+    border-top: 1px dashed rgba(220, 235, 221, 0.25);
+}
+.point-summary { font-size: 13.5px; color: var(--soft); margin: -8px 0 0; opacity: .92; }
+.eco-empty {
+    margin-top: 28px;
+    padding: 22px 22px 24px;
+    border: 2px dashed var(--accent);
+    border-radius: 20px;
+    background: var(--bg);
+}
+.eco-empty h4 { margin: 0 0 6px; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 18px; font-weight: 800; letter-spacing: -0.02em; }
+.eco-empty p { margin: 0 0 16px; color: var(--mu); font-size: 14.5px; line-height: 1.65; }
+.eco-btn {
+    display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px;
+    border-radius: 999px; background: var(--green); color: #fff; text-decoration: none;
+    font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 14.5px;
+    transition: transform .25s ease, background .25s ease;
+}
+.eco-btn:hover { background: #1b5637; transform: translateY(-2px); }
+.eco-btn:active { transform: scale(.96); background: #123d2b; }
+.eco-btn:focus-visible { outline: 3px solid #80b98a; outline-offset: 3px; }
+
+.eco-detail {
+    margin-top: 28px;
+    padding: 34px 38px;
+    background: var(--card);
+    border: 1px solid var(--bd);
+    border-radius: 28px;
+    box-shadow: var(--shadow);
+}
+.eco-detail h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(22px, 2.4vw, 28px); font-weight: 800; letter-spacing: -0.02em; margin: 0 0 8px; }
+.eco-detail h4 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 15px; font-weight: 800; letter-spacing: .02em; margin: 0 0 14px; color: var(--green); }
+.det-note { margin: 0; color: var(--mu); font-size: 14px; max-width: 70ch; }
+.det-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 24px 0 28px; }
+.det-stat { background: var(--bg); border: 1px solid var(--bd); border-radius: 18px; padding: 16px 20px; }
+.det-stat span { display: block; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(24px, 3vw, 32px); letter-spacing: -0.03em; color: var(--green); line-height: 1.1; }
+.det-stat small { color: var(--mu); font-size: 13px; }
+.det-cols { display: grid; grid-template-columns: 1fr 1.2fr; gap: 36px; align-items: start; }
+.det-cols > * { min-width: 0; }
+.pj-list, .hi-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.pj-top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; font-size: 14px; }
+.pj-top span { color: var(--mu); font-size: 13px; }
+.pj-bar { height: 8px; border-radius: 999px; background: var(--soft); margin-top: 6px; overflow: hidden; }
+.pj-bar i { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--green), var(--accent)); transition: width .5s cubic-bezier(.22, 1, .36, 1); }
+.hi { padding: 12px 16px; border: 1px solid var(--bd); border-radius: 16px; background: var(--bg); display: grid; gap: 2px; }
+.hi-top { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.hi-top strong { overflow-wrap: anywhere; }
+.hi-cls { font-size: 12px; font-weight: 700; background: var(--soft); color: var(--green); border-radius: 999px; padding: 1px 10px; }
+.hi-sub { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; font-size: 13.5px; color: var(--mu); }
+.hi-pt { color: var(--green); font-weight: 700; }
+.hi-time { font-size: 12.5px; color: var(--mu); }
+.det-more { margin: 14px 0 0; font-size: 13px; color: var(--mu); }
+/* Hapus riwayat (minimalis, mengikuti palet NUSA ECO) */
+.hi { display: flex; align-items: center; gap: 10px; transition: opacity .22s ease, transform .22s ease; }
+.hi-body { flex: 1; min-width: 0; display: grid; gap: 2px; }
+.hi.leaving { opacity: 0; transform: translateX(12px); pointer-events: none; }
+.hi-del { flex: none; width: 40px; height: 40px; display: inline-grid; place-items: center; border: 0; border-radius: 12px; background: transparent; color: var(--mu); cursor: pointer; transition: background .2s ease, color .2s ease; -webkit-tap-highlight-color: transparent; }
+.hi-del:hover, .hi-del:focus-visible { background: #f6e4e1; color: #a33a2e; }
+.hi-del:focus-visible, .hi-clear:focus-visible, .hi-yes:focus-visible, .hi-no:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+.hi-del svg { width: 18px; height: 18px; }
+.hi-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px; }
+.hi-head h4 { margin: 0; }
+.hi-clear { border: 1px solid var(--bd); background: var(--card); color: var(--mu); font: 600 13px/1 'Inter', sans-serif; padding: 10px 14px; min-height: 40px; border-radius: 999px; cursor: pointer; transition: background .2s ease, color .2s ease, border-color .2s ease; }
+.hi-clear:hover { color: #a33a2e; border-color: #e3bdb7; background: #fbf1ef; }
+.hi-confirm { background: #fbf1ef; border: 1px solid #e3bdb7; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; }
+.hi-confirm p { margin: 0 0 12px; font-size: 14px; color: var(--tx); }
+.hi-confirm-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.hi-yes, .hi-no { font: 700 13.5px/1 'Inter', sans-serif; min-height: 40px; padding: 10px 16px; border-radius: 999px; cursor: pointer; }
+.hi-yes { background: #a33a2e; color: #fff; border: 1px solid #a33a2e; }
+.hi-yes:hover { background: #8a2f25; }
+.hi-no { background: var(--card); color: var(--tx); border: 1px solid var(--bd); }
+.eco-toast { position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); transform: translate(-50%, 12px); max-width: calc(100vw - 32px); background: var(--tx); color: #fff; font: 500 14px/1.4 'Inter', sans-serif; padding: 12px 18px; border-radius: 999px; box-shadow: 0 14px 30px -12px rgba(18, 61, 43, .5); opacity: 0; pointer-events: none; transition: opacity .25s ease, transform .25s ease; z-index: 60; text-align: center; }
+.eco-toast.show { opacity: 1; transform: translate(-50%, 0); }
+@media (prefers-reduced-motion: reduce) { .hi, .eco-toast { transition: none; } }
+
+@media (max-width: 960px) {
+    .eco-detail { padding: 26px 22px; border-radius: 22px; }
+    .det-cols { grid-template-columns: 1fr; gap: 28px; }
+}
+@media (max-width: 520px) {
+    .det-stats { grid-template-columns: 1fr; }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 960px) {
+    .bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    nav {
+        width: 100%;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+    .eco-section {
+        padding: 40px 18px 64px;
+    }
+    .eco-grid {
+        grid-template-columns: 1fr;
+    }
+    .eco-card {
+        padding: 28px 24px;
+        border-radius: 22px;
+    }
+}
+    </style>
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/transitions.css">
+<script src="js/transitions.js" defer></script>
+</head>
+<body>
+
+<div class="sn" role="navigation" aria-label="Navigasi utama"><div class="wrap"><a class="logo" href="index.html#beranda" aria-label="NUSA ECO beranda"><svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3c11 3 17 12 15 22-1 7-7 12-15 12S5 32 5 24C5 13 11 6 20 3z" fill="#236B45"/><path d="M20 12v22M20 22l-7-6M20 27l8-7" stroke="#DCEBDD" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg> NUSA ECO</a><button class="burger" id="bg" aria-label="Buka menu" aria-expanded="false"><i></i><i></i><i></i></button><div class="links" id="lk"><span class="ind" id="ind" aria-hidden="true"></span><a class="l" href="index.html#beranda">Beranda</a><a class="l" href="index.html#edukasi">Edukasi</a><a class="l sp" href="index.html#tentang">Tentang Kami</a><a class="l" href="dashboard.html">Dashboard</a><a class="l" href="banksampah.html">Bank Sampah</a><a class="l on" href="ecopoint-impact.html" aria-current="page">Eco Impact</a><a class="sn-cta" href="scan-sampah.html">Scan Sampah</a></div></div></div>
+    
+<!-- ECO POINT & ECO IMPACT -->
+<main class="eco-section dc dc-leaf-tr" id="eco-point">
+
+    <div class="eco-heading">
+        <span class="eco-label">YOUR ACTION MATTERS</span>
+        <h2>Small Actions.<br><span>Real Impact.</span></h2>
+        <p>
+            Setiap sampah yang kamu pilah dan kumpulkan
+            adalah langkah kecil untuk bumi yang lebih baik.
+        </p>
+    </div>
+
+    <div class="eco-grid">
+
+        <!-- ECO POINT -->
+        <div class="eco-card point-card">
+
+            <div class="eco-card-top">
+                <span>🌱 ECO POINT</span>
+                <span class="eco-status">● DATA LOKAL</span>
+            </div>
+
+            <h3>Kontribusimu<br>Dimulai dari Sini.</h3>
+
+            <div class="point-display">
+                <span id="totalPoint">0</span>
+                <small>POINTS</small>
+            </div>
+
+            <p class="point-summary" id="pointSummary">Belum ada setoran tersimpan.</p>
+
+            <p class="sim-title" id="simTitle">Simulasi hitung poin</p>
+            <div class="point-form" role="group" aria-labelledby="simTitle">
+                <label for="wasteType">Jenis Sampah</label>
+                <select id="wasteType"></select>
+
+                <label for="wasteWeight">Berat Sampah (kg)</label>
+                <input type="number" id="wasteWeight"
+                    min="0.1" step="0.1" placeholder="Contoh: 2">
+
+                <button type="button" id="calculatePoint">
+                    Hitung ECO Point →
+                </button>
+            </div>
+
+            <p class="point-info" id="pointMessage">
+                Simulasi ini hanya perkiraan dan tidak disimpan. Total di atas berasal dari setoran di Bank Sampah.
+            </p>
+
+        </div>
+
+        <!-- ECO IMPACT -->
+        <div class="eco-card impact-card">
+
+            <div class="eco-card-top">
+                <span>🌍 ECO IMPACT</span>
+                <span class="eco-status">● DATA LOKAL</span>
+            </div>
+
+            <h3>Setiap Sampah<br>Punya Dampak.</h3>
+
+            <p class="impact-desc">
+                Lihat kontribusi sampah yang berhasil
+                dikumpulkan melalui bank sampah.
+            </p>
+
+            <div class="impact-number">
+                <span id="totalWaste">0</span>
+                <small>KG</small>
+            </div>
+
+            <div class="impact-progress" id="impactProgress" role="progressbar" aria-label="Progres menuju target pengumpulan" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div class="impact-progress-bar" id="impactBar"></div>
+            </div>
+
+            <div class="impact-footer">
+                <span>Target pengumpulan</span>
+                <strong>100 KG</strong>
+            </div>
+
+            <div class="impact-message" id="impactMessage" aria-live="polite">
+                Setiap kilogram berarti.
+            </div>
+
+            <div class="eco-empty" id="emptyState" hidden>
+                <h4 id="emptyTitle">Belum ada data setoran</h4>
+                <p id="emptyMsg">Catat setoran pertamamu di Bank Sampah.</p>
+                <a class="eco-btn" href="banksampah.html">Catat Setoran →</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- RINCIAN SETORAN (dihitung dari data tersimpan) -->
+    <section class="eco-detail" id="ecoDetail" aria-labelledby="detTitle" hidden>
+        <h3 id="detTitle">Rincian setoran tersimpan</h3>
+        <p class="det-note">Data ini berasal dari setoran yang dicatat di <a class="ne-link" href="banksampah.html">Bank Sampah</a> dan tersimpan di browser ini. Angka ini terpisah dari data acuan studi kasus (170 kg per bulan) di <a class="ne-link" href="dashboard.html">Dashboard</a>.</p>
+
+        <div class="det-stats">
+            <div class="det-stat"><span id="statCount">0</span><small>Jumlah setoran</small></div>
+            <div class="det-stat"><span id="statStudents">0</span><small>Siswa yang menyetor</small></div>
+            <div class="det-stat"><span id="statKg">0 kg</span><small>Total berat tersimpan</small></div>
+        </div>
+
+        <div class="det-cols">
+            <div>
+                <h4>Per jenis sampah</h4>
+                <ul class="pj-list" id="perJenis"></ul>
+            </div>
+            <div>
+                <div class="hi-head">
+                    <h4>Riwayat terbaru</h4>
+                    <button type="button" class="hi-clear" id="histClear">Hapus semua</button>
+                </div>
+                <div class="hi-confirm" id="histConfirm" role="alertdialog" aria-labelledby="histConfirmMsg" hidden>
+                    <p id="histConfirmMsg"></p>
+                    <div class="hi-confirm-row">
+                        <button type="button" class="hi-yes" id="histYes">Ya, hapus semua</button>
+                        <button type="button" class="hi-no" id="histNo">Batal</button>
+                    </div>
+                </div>
+                <ul class="hi-list" id="hist"></ul>
+                <p class="det-more" id="histMore"></p>
+                <p class="det-more" id="legacyNote" hidden></p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="ne-footer"><p>©Disuruh Ngikut | SMKN 4 Kuningan</p></footer>
+
+<div class="eco-toast" id="histToast" role="status" aria-live="polite"></div>
+<script src="js/storage.js"></script>
+<script src="js/eco-impact.js"></script>
+<script src="js/navbar.js"></script>
+</body>
+</html>

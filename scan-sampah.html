@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Scan Sampah — NUSA ECO</title>
+<link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/scan.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/transitions.css">
+<script src="js/transitions.js" defer></script>
+</head>
+<body>
+<div class="sn" role="navigation" aria-label="Navigasi utama"><div class="wrap"><a class="logo" href="index.html#beranda" aria-label="NUSA ECO beranda"><svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3c11 3 17 12 15 22-1 7-7 12-15 12S5 32 5 24C5 13 11 6 20 3z" fill="#236B45"/><path d="M20 12v22M20 22l-7-6M20 27l8-7" stroke="#DCEBDD" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg> NUSA ECO</a><button class="burger" id="bg" aria-label="Buka menu" aria-expanded="false"><i></i><i></i><i></i></button><div class="links" id="lk"><span class="ind" id="ind" aria-hidden="true"></span><a class="l" href="index.html#beranda">Beranda</a><a class="l" href="index.html#edukasi">Edukasi</a><a class="l sp" href="index.html#tentang">Tentang Kami</a><a class="l" href="dashboard.html">Dashboard</a><a class="l" href="banksampah.html">Bank Sampah</a><a class="l" href="ecopoint-impact.html">Eco Impact</a><a class="sn-cta on" aria-current="page" href="scan-sampah.html">Scan Sampah</a></div></div></div>
+<main class="scan wrap">
+<div class="sh dc dc-leaf-tr"><span class="tag">Simulasi klasifikasi</span><h1>Scan Sampah</h1>
+<p>Unggah atau ambil foto sampah, lalu isi nama objek untuk melihat masuk ke kategori mana. Hasilnya dicocokkan dengan database demo lokal. Ini simulasi, bukan analisis AI atas gambar.</p></div>
+<div class="card dberr" id="dberr" role="alert" hidden><h3>Database demo gagal dimuat</h3><p id="dbmsg"></p>
+<div class="row"><button type="button" class="btn" id="retry">Coba lagi</button><button type="button" class="btn o" id="dbpick">Pilih file waste-database.json</button><input type="file" id="dbfile" accept=".json,application/json" class="vh" tabindex="-1"></div></div>
+<div class="grid pan" id="stIn">
+<div class="card"><div class="frame" id="frame"><img id="pimg" alt="Pratinjau foto sampah" hidden><video id="vid" playsinline muted hidden></video><div class="ph" id="ph">Belum ada foto. Unggah atau ambil foto sampah terlebih dahulu.</div><i class="line" id="line" hidden></i></div>
+<div class="row"><button type="button" class="btn o" id="up">Unggah Foto</button><button type="button" class="btn o" id="cam">Gunakan Kamera</button><button type="button" class="btn" id="snap" hidden>Ambil Foto</button><button type="button" class="btn o" id="rmph" hidden>Hapus Foto</button></div>
+<input type="file" id="file" accept="image/*" class="vh" tabindex="-1"></div>
+<div class="card"><label for="q">Nama objek</label><input type="text" id="q" autocomplete="off" placeholder="Contoh: kulit pisang, botol plastik" maxlength="60">
+<p class="hint2">Atau pilih dari katalog:</p><div class="chips" id="cat" role="group" aria-label="Katalog objek"></div>
+<div class="row"><button type="button" class="btn" id="go" disabled>Mulai Scan</button></div>
+<p class="hint2" id="photoHint">Tombol Mulai Scan aktif setelah foto diunggah atau diambil.</p>
+<p class="status" id="st" role="status" aria-live="polite"></p></div></div>
+<div class="card nf pan" id="stNF" hidden><h3>Objek belum dikenali</h3><p id="nfmsg">Objek belum dikenali dalam database demo. Silakan pilih jenis sampah secara manual.</p><p class="note">Hasil scan merupakan simulasi klasifikasi dari database demo, bukan analisis AI pada gambar.</p>
+<div class="chips" id="man"></div><div class="row"><button type="button" class="btn o" id="back">Coba objek lain</button></div></div>
+<div class="pan" id="stRes" hidden></div>
+<div class="card" id="hist" hidden><h3>Riwayat scan</h3><ul class="hl" id="hl"></ul><button type="button" class="btn o" id="hclr">Hapus riwayat</button></div>
+</main>
+<footer class="ne-footer"><p>©Disuruh Ngikut | SMKN 4 Kuningan</p></footer>
+<script src="js/navbar.js"></script>
+<script src="js/waste-scan.js"></script>
+</body>
+</html>
